@@ -87,4 +87,6 @@ print(personas[0]['nacionalidad'])
 print(personas[1]['hobbies'])
 print(personas[0]['hobbies'][1]['experiencia'])
 
-# si se leimina
+# si se elimina
+
+del(personas)
