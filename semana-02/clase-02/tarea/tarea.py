@@ -10,27 +10,7 @@ from flask import Flask, request
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app=app)
-Lista = [{
-    "nombre": "Jose",
-    "dni": 7723,
-    "apellido" : "Guierrez",
-    "area": "Developer",
-    "fechaInicio": "hoy"
-},
-    {
-    "nombre": "Jesus",
-    "dni": 7713,
-     "apellido" : "Lujan",
-    "area": "Developer",
-    "fechaInicio": "hoy"
-},
-    {
-    "nombre": "Pedro",
-    "dni": 7733,
-     "apellido" : "Castillo",
-    "area": "Developer",
-    "fechaInicio": "hoy"
-}]
+Lista = []
 
 
 @app.route('/', methods=['POST', 'GET'])
@@ -61,6 +41,7 @@ def usuarios():
 
     elif request.method == 'POST':
         data = request.get_json()
+
         # insertando un registro en una bd (INSERT INTO ...)
         Lista.append(data)
         return {
@@ -103,7 +84,7 @@ def usuario(id):
     elif request.method == 'DELETE':
         # data = request.get_json()
         if(id < len(Lista)):
-            Lista.pop(id - 1)
+            Lista.pop(id)
             return {
                 'ok': True,
                 'data': Lista,
@@ -114,6 +95,21 @@ def usuario(id):
                 'ok': False,
                 'data': None,
                 'message': 'El usuario con el id {} no existe'.format(id)
+            }
+
+
+@app.route('/usuario/<int:id>', methods=['GET'])
+def usuarioDni(id):
+    if request.method == 'GET':
+
+        for i in Lista:
+            if(i["dni"] == str(id)):
+                return i
+        else:
+            return {
+                'ok': False,
+                'data': None,
+                'message': 'El usuario no existe'
             }
 
 
