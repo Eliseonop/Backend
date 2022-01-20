@@ -5,3 +5,7 @@ python manage.py migrate 'ejecuta todas las migraciones que aun no se han realiz
 python manage.py showmigrations 'lista todas la migraciones que hay en le proyecto  y mediante [x] indicar si la milgracion ya se realizo en la bd
 
 python manage.py startapp core, crea una carpeta
+
+python manage.py makemigation <nobre app> genera la migracion a la base de datos para que lo veas
+
+python manage.py sqlmigrate <nombre_app> <num_migracion> > mostrar en lenguaje sql los cambios realizados en la migracion python

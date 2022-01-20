@@ -10,14 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-import imp
 from os import environ
 from pathlib import Path
 from dotenv import load_dotenv
 
-# busca el archivo en .env en nuestro proyecto y si lo encuentra configura para pyhon las variable sde entorno definidas en ese archivo
+# buscara el archivo .env en nuestro proyecto y si lo encuentra configurara para python las variables de entorno definidas en ese archivo
 load_dotenv()
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-b6vt$tmbt6!y%ovt2gju*784w9n)a*r4#te8wlz*-jys+du3(o'
+SECRET_KEY = 'django-insecure-!gs&_6wu+*)sm%0n0zh0hr@u7%bca&a+@#n&blt@0mm=(rg%0('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -44,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -87,8 +87,7 @@ DATABASES = {
         'PASSWORD': environ.get('PASSWORD_DB'),
         'HOST': environ.get('HOST_DB'),
         'USER': environ.get('USER_DB'),
-        'PORT': environ.get('PORT_DB'),
-
+        'PORT': environ.get('PORT_DB')
     }
 }
 
