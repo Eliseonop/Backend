@@ -1,7 +1,6 @@
 // const express = require("express");
 import express, { json } from "express";
-const app = express();
-const PORT = 3000;
+import cors from "cors";
 
 const productos = [
   {
@@ -16,6 +15,16 @@ const productos = [
   },
 ];
 
+const app = express();
+const PORT = 3000;
+app.use(
+  cors()
+  // {
+  // methods: ["GET", "POST"],
+  // origin: "",
+  // }
+  // nuestro fornt que envia eticion a backend, apaerte de los metodos tambien manda los heders, elmavegador, el dominio
+);
 app.use(json());
 app.get("/", (req, res) => {
   //req > es la informacion que me viene del cliente
