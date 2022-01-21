@@ -1,0 +1,33 @@
+{
+  "name": "minimarket",
+  "version": "1.0.0",
+  "description": "proyecto de minimarket",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eliseonop/Backend.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "middelware"
+  ],
+  "author": "Eliseo Falcon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eliseonop/Backend/issues"
+  },
+  "homepage": "https://github.com/Eliseonop/Backend#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
