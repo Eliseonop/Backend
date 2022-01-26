@@ -1,34 +1,33 @@
 {
-  "name": "minimarket",
+  "name": "test-express",
   "version": "1.0.0",
-  "description": "proyecto de minimarket",
+  "description": "ejemplo de next con expres",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "start:dev": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Eliseonop/Backend.git"
   },
   "keywords": [
-    "nodejs",
-    "express",
-    "middelware"
+    "backend",
+    "express"
   ],
-  "author": "Eliseo Falcon",
+  "author": "Eliseo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Eliseonop/Backend/issues"
   },
   "homepage": "https://github.com/Eliseonop/Backend#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.2"
+    "@prisma/client": "^3.8.1",
+    "express": "^4.17.2",
+    "prisma": "^3.8.1"
   },
   "devDependencies": {
+    "jest": "^27.4.7",
     "nodemon": "^2.0.15"
   }
 }
