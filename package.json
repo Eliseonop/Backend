@@ -1,9 +1,8 @@
 {
-  "name": "test-express",
+  "name": "cafeteria",
   "version": "1.0.0",
-  "description": "ejemplo de next con expres",
+  "description": "backend para cafeteria",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,22 +11,14 @@
     "url": "git+https://github.com/Eliseonop/Backend.git"
   },
   "keywords": [
-    "backend",
-    "express"
+    "ppostgres",
+    "nodejs",
+    "prisma"
   ],
   "author": "Eliseo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Eliseonop/Backend/issues"
   },
-  "homepage": "https://github.com/Eliseonop/Backend#readme",
-  "dependencies": {
-    "@prisma/client": "^3.8.1",
-    "express": "^4.17.2",
-    "prisma": "^3.8.1"
-  },
-  "devDependencies": {
-    "jest": "^27.4.7",
-    "nodemon": "^2.0.15"
-  }
+  "homepage": "https://github.com/Eliseonop/Backend#readme"
 }
