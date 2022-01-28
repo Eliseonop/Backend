@@ -1,17 +1,20 @@
 {
   "name": "cafeteria",
   "version": "1.0.0",
-  "description": "backend para cafeteria",
+  "description": "backend para una cafeteria",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "start:dev": "dotenv -e .env -- nodemon src/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Eliseonop/Backend.git"
   },
   "keywords": [
-    "ppostgres",
+    "express",
     "nodejs",
     "prisma"
   ],
@@ -20,5 +23,21 @@
   "bugs": {
     "url": "https://github.com/Eliseonop/Backend/issues"
   },
-  "homepage": "https://github.com/Eliseonop/Backend#readme"
+  "homepage": "https://github.com/Eliseonop/Backend#readme",
+  "dependencies": {
+    "@prisma/client": "^3.8.1",
+    "bcrypt": "^5.0.1",
+    "class-validator": "^0.13.2",
+    "express": "^4.17.2",
+    "morgan": "^1.10.0",
+    "prisma": "^3.8.1",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^4.1.1",
+    "nodemon": "^2.0.15"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
 }
