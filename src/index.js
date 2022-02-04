@@ -1,6 +1,7 @@
 import express, { json } from "express";
 import morgan from "morgan";
 import { authRouter } from "./routes/auth.routes.js";
+import { productoRouter } from "./routes/producto.routes.js";
 import { tipoProductoRouter } from "./routes/tipoProducto.routes.js";
 
 const app = express();
@@ -12,6 +13,7 @@ app.use(json());
 //defino mis rutas
 app.use(authRouter);
 app.use(tipoProductoRouter);
+app.use(productoRouter);
 
 app.listen(PORT, () => {
   console.log(`servidor corriendo en el puerto ${PORT}`);
