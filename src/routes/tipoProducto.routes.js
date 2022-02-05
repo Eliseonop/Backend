@@ -3,7 +3,7 @@ import {
   crearTipoProducto,
   listarTipoProductos,
 } from "../controllers/tipoProducto.controller.js";
-import { validarUsuario } from "../utils/validator.js";
+import { validarUsuario } from "../utils/validador.js";
 
 export const tipoProductoRouter = Router();
 

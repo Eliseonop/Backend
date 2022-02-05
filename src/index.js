@@ -1,22 +1,24 @@
 import express, { json } from "express";
 import morgan from "morgan";
 import { authRouter } from "./routes/auth.routes.js";
-import { productoRouter } from "./routes/producto.routes.js";
 import { tipoProductoRouter } from "./routes/tipoProducto.routes.js";
+import { productoRouter } from "./routes/producto.routes.js";
+import { archivoRouter } from "./routes/archivo.routes.js";
 
 const app = express();
-const PORT = process.env.PORT ?? 3000;
 
 app.use(morgan("dev"));
 app.use(json());
 
-//defino mis rutas
+// defino mis rutas
 app.use(authRouter);
 app.use(tipoProductoRouter);
 app.use(productoRouter);
+app.use(archivoRouter);
+// fin de la definicion
+
+const PORT = process.env.PORT ?? 3000;
 
 app.listen(PORT, () => {
-  console.log(`servidor corriendo en el puerto ${PORT}`);
+  console.log(`Servidor corriendo exitosamente en el puerto ${PORT}`);
 });
-
-// vamos a usar morgan
