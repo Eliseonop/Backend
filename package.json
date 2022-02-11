@@ -1,0 +1,39 @@
+{
+  "name": "chifa",
+  "version": "1.0.0",
+  "description": "backend de chicha con su wantan",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "dotenv -e .env -- nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eliseonop/Backend.git"
+  },
+  "keywords": [
+    "expres",
+    "mongo",
+    "nosql",
+    "multer"
+  ],
+  "author": "Eliseo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eliseonop/Backend/issues"
+  },
+  "homepage": "https://github.com/Eliseonop/Backend#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^5.0.0",
+    "nodemon": "^2.0.15",
+    "standard": "^16.0.4"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/slintrc.json"
+  }
+}
