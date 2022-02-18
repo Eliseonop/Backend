@@ -25,8 +25,14 @@
   },
   "homepage": "https://github.com/Eliseonop/Backend#readme",
   "dependencies": {
+    "@sendgrid/mail": "^7.6.1",
+    "bcrypt": "^5.0.1",
+    "crypto-js": "^4.1.1",
     "express": "^4.17.2",
-    "mongoose": "^6.2.1"
+    "mongoose": "^6.2.1",
+    "multer": "^1.4.4",
+    "nanoid": "^3.2.0",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "dotenv-cli": "^5.0.0",
